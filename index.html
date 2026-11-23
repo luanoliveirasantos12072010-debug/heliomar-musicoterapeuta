@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Heliomar Jacob · Musicoterapeuta em Guarapari – ES</title>
+<meta name="description" content="Musicoterapeuta Heliomar Jacob em Guarapari – ES. Musicoterapia na Lagoa Funda. Agende pelo WhatsApp (27) 99604-8916.">
+<meta name="theme-color" content="#2c2b5a">
+<meta property="og:title" content="Musicoterapeuta Heliomar · Guarapari">
+<meta property="og:description" content="A música como caminho de cuidado. Musicoterapia em Guarapari – ES.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232c2b5a'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia' font-size='34' fill='%23f4c76b'%3E♪%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ind:#2c2b5a;--ind2:#3a3870;--ind3:#24234b;--coral:#ee8a6a;--coralD:#d26c4c;--gold:#f4c76b;--goldL:#fbe5b4;
+  --lav:#b9b3ea;--cream:#fbf6ee;--sand:#f3ead9;--ink:#2c2b5a;--ink2:#64618f;
+  --lineL:rgba(251,246,238,.15);--lineD:rgba(44,43,90,.14);
+  --spring:cubic-bezier(.34,1.56,.64,1);--ease:cubic-bezier(.22,1,.36,1);--io:cubic-bezier(.76,0,.24,1);
+  --serif:"Fraunces",Georgia,serif;--sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-weight:300;color:var(--cream);background:var(--ind);font-size:18px;line-height:1.7;overflow-x:hidden}
+main{overflow-x:clip}
+img,svg,canvas{display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+::selection{background:var(--gold);color:var(--ind)}
+.wrap{width:min(1220px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.015em}
+h2{font-size:clamp(42px,6vw,86px)}
+em{font-style:italic}
+.gold{color:var(--gold)}.coral{color:var(--coral)}
+.kick{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.kick::before{content:"♪";font-size:16px;letter-spacing:0}
+.lt .kick{color:var(--coralD)}
+.lead{font-size:clamp(18px,1.6vw,21px);opacity:.85;max-width:54ch}
+section{position:relative}
+.sec{padding:clamp(100px,12vw,160px) 0}
+.lt{background:var(--cream);color:var(--ink)}
+
+.sp .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.sp .c{display:inline-block;transform:translateY(110%) rotate(8deg);transform-origin:0 100%;transition:transform 1s var(--ease)}
+.sp.on .c{transform:none}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;padding:18px 28px;border-radius:999px;font-weight:500;font-size:16px;border:0;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .5s var(--spring),color .5s}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;transform:translateY(101%);transition:transform .6s var(--io)}
+.btn:hover::before{transform:none}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.g{background:var(--gold);color:var(--ind);box-shadow:0 20px 40px -18px rgba(244,199,107,.75)}
+.btn.g::before{background:var(--goldL)}
+.btn.c{background:var(--coral);color:#fff;box-shadow:0 20px 40px -18px rgba(238,138,106,.8)}
+.btn.c::before{background:var(--coralD)}
+.btn.w{background:#25d366;color:#fff}
+.btn.w::before{background:#1fb457}
+.btn.o{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1px var(--lineL)}
+.btn.o::before{background:var(--cream)}
+.btn.o:hover{color:var(--ind)}
+.lt .btn.o{color:var(--ink);box-shadow:inset 0 0 0 1px var(--lineD)}
+.lt .btn.o::before{background:var(--ind)}
+.lt .btn.o:hover{color:var(--cream)}
+
+/* loader */
+.ld{position:fixed;inset:0;z-index:500;background:var(--ind);display:grid;place-items:center;transition:clip-path 1.1s var(--io);clip-path:circle(150% at 50% 50%)}
+.ld.out{clip-path:circle(0% at 50% 50%)}
+.ld .in{text-align:center}
+.ld .eq{display:flex;gap:6px;justify-content:center;align-items:flex-end;height:60px;margin-bottom:22px}
+.ld .eq i{width:8px;border-radius:6px;background:linear-gradient(var(--gold),var(--coral));animation:eq 1s ease-in-out infinite}
+.ld .n{font-family:var(--serif);font-size:clamp(56px,10vw,110px);line-height:1;color:var(--cream);font-variant-numeric:tabular-nums}
+.ld small{display:block;margin-top:10px;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+@keyframes eq{0%,100%{height:12px}50%{height:var(--h,50px)}}
+
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:90;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--coral),var(--gold),var(--lav))}
+.note{position:fixed;z-index:420;pointer-events:none;font-size:18px;color:var(--gold);animation:nt 1.4s var(--ease) forwards}
+@keyframes nt{from{opacity:.9;transform:translate(-50%,-50%) scale(.6)}to{opacity:0;transform:translate(calc(-50% + var(--dx)),-140px) rotate(var(--r)) scale(1.2)}}
+.cur{position:fixed;left:0;top:0;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:1px solid var(--gold);z-index:450;pointer-events:none;opacity:0;transition:width .4s var(--ease),height .4s var(--ease),margin .4s var(--ease),background .3s,opacity .3s}
+.cur.on{opacity:1}
+.cur.big{width:76px;height:76px;margin:-38px 0 0 -38px;background:rgba(244,199,107,.14)}
+@media(hover:none){.cur{display:none}}
+
+/* topo */
+.top{position:fixed;top:0;left:0;right:0;z-index:80;padding:18px 0;transition:transform .6s var(--ease),background .4s,padding .4s}
+.top.sc{background:rgba(44,43,90,.84);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:12px 0;box-shadow:0 1px 0 var(--lineL)}
+.top.hide{transform:translateY(-110%)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mk{width:46px;height:46px;border-radius:50%;background:conic-gradient(from 0deg,var(--coral),var(--gold),var(--lav),var(--coral));display:grid;place-items:center;font-size:22px;color:var(--ind);animation:spin 12s linear infinite}
+.brand .mk span{width:36px;height:36px;border-radius:50%;background:var(--ind);color:var(--gold);display:grid;place-items:center;animation:spin 12s linear infinite reverse}
+@keyframes spin{to{rotate:360deg}}
+.brand b{display:block;font-family:var(--serif);font-weight:400;font-size:24px;line-height:1}
+.brand small{display:block;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-top:5px}
+.nav{display:flex;gap:28px;font-size:14.5px}
+.nav a{position:relative;opacity:.82}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--io)}
+.nav a:hover{opacity:1}.nav a:hover::after{transform:none;transform-origin:left}
+.top .btn{padding:13px 22px;font-size:14.5px}
+@media(max-width:1000px){.nav{display:none}}
+@media(max-width:520px){.top .btn span{display:none}.top .btn{padding:13px}.brand b{font-size:21px}}
+
+/* hero */
+.hero{min-height:100svh;padding:130px 0 80px;display:flex;align-items:center;overflow:hidden;background:radial-gradient(1000px 700px at 85% 30%,rgba(238,138,106,.28),transparent 60%),radial-gradient(900px 700px at 0% 100%,rgba(185,179,234,.22),transparent 60%),var(--ind)}
+#wave{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;opacity:.9;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero h1{font-size:clamp(56px,8.4vw,128px);margin:24px 0 22px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero .meta span{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:rgba(251,246,238,.07);box-shadow:inset 0 0 0 1px var(--lineL);font-size:14px}
+.hero .meta b{color:var(--gold);font-weight:600}
+.disc{position:relative;justify-self:center;width:min(440px,80vw);aspect-ratio:1}
+.disc .vin{position:absolute;inset:0;border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%,#34336a 0 2px,#2e2d60 2px 5px);box-shadow:0 60px 100px -40px rgba(10,8,40,.8),inset 0 0 0 10px rgba(251,246,238,.05);animation:spin 9s linear infinite;transform:translate(var(--px,0),var(--py,0))}
+.disc .vin::after{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 30deg,transparent 0 40deg,rgba(255,255,255,.12) 60deg,transparent 80deg 220deg,rgba(255,255,255,.08) 240deg,transparent 260deg)}
+.disc .lab{position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle,var(--gold) 0 8%,var(--coral) 9% 100%);display:grid;place-items:center;animation:spin 9s linear infinite;transform:translate(var(--px,0),var(--py,0))}
+.disc .lab span{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2vw,22px);color:#fff;text-align:center;line-height:1.1;margin-top:42%}
+.disc .arm{position:absolute;right:-4%;top:-2%;width:44%;height:52%;transform-origin:90% 8%;rotate:-8deg;animation:arm 6s ease-in-out infinite}
+@keyframes arm{50%{rotate:-2deg}}
+.disc .chip{position:absolute;left:-8%;bottom:10%;padding:14px 20px;border-radius:20px;background:var(--cream);color:var(--ink);box-shadow:0 30px 60px -24px rgba(10,8,40,.6);font-size:13.5px;line-height:1.3;animation:fl 6s ease-in-out infinite}
+.disc .chip b{display:block;font-family:var(--serif);font-size:30px;font-weight:600;line-height:1}
+.disc .chip .st{color:#d99a1f;letter-spacing:2px}
+@keyframes fl{50%{transform:translateY(-12px)}}
+.flo{position:absolute;color:var(--gold);opacity:.55;font-size:28px;animation:fl2 7s ease-in-out infinite;pointer-events:none}
+@keyframes fl2{50%{transform:translateY(-26px) rotate(12deg)}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.disc{width:min(320px,76vw);margin-top:10px}.disc .chip{left:-4%}}
+
+/* marquee */
+.mq{background:var(--gold);color:var(--ind);overflow:hidden;padding:22px 0;transform:rotate(-2deg);margin:-26px -20px 0;position:relative;z-index:3;box-shadow:0 30px 60px -30px rgba(10,8,40,.5)}
+.mq .tk{display:flex;width:max-content;animation:mqa 28s linear infinite}
+.mq span{font-family:var(--serif);font-size:clamp(40px,5.4vw,76px);line-height:1;display:flex;align-items:center;gap:36px;padding-right:36px;white-space:nowrap}
+.mq span:nth-child(even){font-style:italic;color:var(--coralD)}
+.mq span::after{content:"♫";font-size:.5em;color:var(--ind)}
+@keyframes mqa{to{transform:translateX(-50%)}}
+
+/* o que e */
+.oq .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:end}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:60px}
+.card{position:relative;padding:34px 30px 30px;border-radius:30px;background:var(--sand);overflow:hidden;transition:transform .6s var(--spring),background .5s,color .5s;transform-style:preserve-3d}
+.card:hover{background:var(--ind);color:var(--cream)}
+.card .ic{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;background:var(--cream);color:var(--coralD);margin-bottom:22px;transition:background .5s,transform .6s var(--spring)}
+.card:hover .ic{background:var(--gold);color:var(--ind);transform:rotate(-8deg) scale(1.08)}
+.card .ic svg{width:30px;height:30px}
+.card h3{font-size:32px;margin-bottom:10px}
+.card p{font-size:16.5px;opacity:.8}
+.card::after{content:"";position:absolute;right:-50px;bottom:-50px;width:150px;height:150px;border-radius:50%;border:2px dashed rgba(238,138,106,.4);transition:transform 1s var(--ease)}
+.card:hover::after{transform:scale(1.8) rotate(90deg)}
+@media(max-width:860px){.oq .grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}
+
+/* piano */
+.pi{background:linear-gradient(180deg,var(--ind3),var(--ind));text-align:center;overflow:hidden}
+.pi .lead{margin:18px auto 0}
+.keys{position:relative;display:flex;justify-content:center;margin:56px auto 0;width:min(760px,100%);height:clamp(170px,26vw,260px);user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.key{position:relative;flex:1;border:0;border-radius:0 0 16px 16px;background:linear-gradient(180deg,#fffdf8,var(--sand));margin:0 3px;cursor:pointer;box-shadow:0 14px 0 -4px #d8ccb6,0 30px 40px -24px rgba(10,8,40,.8);transition:transform .15s,box-shadow .15s,background .3s}
+.key.dn{transform:translateY(8px);box-shadow:0 6px 0 -4px #d8ccb6;background:linear-gradient(180deg,var(--goldL),var(--gold))}
+.key span{position:absolute;left:0;right:0;bottom:14px;font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--ink2)}
+.blk{position:absolute;top:0;width:7%;height:60%;border:0;border-radius:0 0 10px 10px;background:linear-gradient(180deg,var(--ind2),#4a4890);cursor:pointer;z-index:2;box-shadow:0 10px 20px -8px rgba(10,8,40,.8);transition:transform .15s,background .3s}
+.blk.dn{transform:translateY(5px);background:linear-gradient(180deg,var(--coral),var(--coralD))}
+.pi small.hint{display:block;margin-top:34px;font-size:14px;opacity:.7}
+.ripple{position:absolute;border-radius:50%;border:2px solid var(--gold);pointer-events:none;animation:rp 1.2s var(--ease) forwards;z-index:3}
+@keyframes rp{from{width:10px;height:10px;opacity:1;transform:translate(-50%,-50%)}to{width:240px;height:240px;opacity:0;transform:translate(-50%,-50%)}}
+
+/* passos */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;position:relative}
+.steps::before{content:"";position:absolute;left:6%;right:6%;top:46px;height:2px;background:repeating-linear-gradient(90deg,var(--coral) 0 10px,transparent 10px 20px);opacity:.5}
+.step{position:relative;padding:0 10px;text-align:center}
+.step b{width:92px;height:92px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;background:var(--ind);color:var(--gold);font-family:var(--serif);font-size:40px;font-weight:400;box-shadow:0 0 0 10px var(--cream),0 24px 40px -16px rgba(44,43,90,.6);transition:transform .6s var(--spring),background .4s}
+.step:hover b{transform:scale(1.1) rotate(-8deg);background:var(--coral);color:#fff}
+.step h3{font-size:30px;margin-bottom:8px}
+.step p{font-size:16.5px;color:var(--ink2);max-width:30ch;margin:0 auto}
+@media(max-width:820px){.steps{grid-template-columns:1fr;gap:40px}.steps::before{display:none}}
+
+/* avaliacoes */
+.gg{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(24px,4vw,60px);align-items:center;margin-top:90px;padding:clamp(28px,4vw,50px);border-radius:32px;background:var(--ind);color:var(--cream);position:relative;overflow:hidden}
+.gg::before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(244,199,107,.3),transparent 70%)}
+.gg>b{font-family:var(--serif);font-size:clamp(80px,9vw,120px);font-weight:400;line-height:.9;color:var(--gold)}
+.gg .st{color:var(--gold);letter-spacing:4px;font-size:22px}
+.gg h3{font-size:clamp(28px,3vw,40px);margin:4px 0 8px}
+.gg p{opacity:.8}
+@media(max-width:820px){.gg{grid-template-columns:1fr}}
+
+/* faq */
+.faq{max-width:900px;margin:60px auto 0}
+.faq details{border-bottom:1px solid var(--lineL);padding:24px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--serif);font-size:clamp(22px,2.4vw,30px);transition:color .3s}
+.faq summary:hover{color:var(--gold)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{font-style:normal;width:46px;height:46px;flex:none;border-radius:50%;background:var(--gold);color:var(--ind);display:grid;place-items:center;transition:transform .6s var(--spring),background .3s;font-size:22px}
+.faq details[open] summary i{transform:rotate(135deg);background:var(--coral);color:#fff}
+.faq details p{margin-top:12px;opacity:.85;font-size:17.5px;max-width:64ch;animation:fi .5s var(--ease)}
+@keyframes fi{from{opacity:0;transform:translateY(14px)}}
+
+/* contato */
+.ct{background:radial-gradient(900px 600px at 100% 0%,rgba(238,138,106,.25),transparent 60%),linear-gradient(170deg,var(--ind2),var(--ind3))}
+.ct h2{font-size:clamp(54px,9vw,136px);line-height:.92}
+.ct .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,60px);margin-top:56px}
+.ct .grid>*{min-width:0}
+.rows a,.rows .r{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-bottom:1px solid var(--lineL);transition:padding .5s var(--ease),color .3s}
+.rows a:hover{padding-left:14px;color:var(--gold)}
+.rows span{min-width:0}
+.rows small{display:block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.rows b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.6vw,32px);line-height:1.25;overflow-wrap:anywhere}
+.rows svg{width:24px;height:24px;flex:none;transition:transform .5s var(--spring)}
+.rows a:hover svg{transform:rotate(-45deg)}
+.ct .bts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.map{border-radius:30px;overflow:hidden;min-height:460px;background:var(--ind2);box-shadow:0 50px 90px -50px rgba(10,8,40,.8)}
+.map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+@media(max-width:900px){.ct .grid{grid-template-columns:1fr}.map,.map iframe{min-height:340px}}
+
+footer{background:var(--ind3);padding:70px 0 150px;font-size:15px}
+footer .big{font-family:var(--serif);font-size:clamp(46px,11vw,180px);line-height:.95;color:transparent;-webkit-text-stroke:1px rgba(244,199,107,.45);white-space:nowrap;overflow:hidden;margin-bottom:44px}
+footer .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer h5{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:8px;opacity:.85}
+footer a:hover{color:var(--gold)}
+footer .cvv{margin-top:34px;font-size:14px;opacity:.7;max-width:66ch}
+footer .fb{margin-top:28px;padding-top:22px;border-top:1px solid var(--lineL);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;opacity:.65}
+@media(max-width:760px){footer .fg{grid-template-columns:1fr}}
+
+/* flutuantes: tudo na ESQUERDA (marca do Netlify fica na direita) */
+.waf{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:95;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 18px 34px -12px rgba(37,211,102,.8);transition:transform .5s var(--spring)}
+.waf::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:pu 2.4s ease-out infinite}
+@keyframes pu{from{opacity:.8;transform:scale(.9)}to{opacity:0;transform:scale(1.7)}}
+.waf:hover{transform:scale(1.1) rotate(-10deg)}
+.waf svg{width:30px;height:30px;color:#fff}
+.ai-btn{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:calc(max(18px,env(safe-area-inset-bottom)) + 74px);z-index:96;display:flex;align-items:center;gap:12px;padding:6px 20px 6px 6px;border-radius:999px;border:0;cursor:pointer;background:var(--cream);color:var(--ink);box-shadow:0 20px 44px -16px rgba(10,8,40,.6);transition:transform .5s var(--spring)}
+.ai-btn:hover{transform:translateY(-4px)}
+.ai-btn .av{width:46px;height:46px;border-radius:50%;flex:none;position:relative;display:grid;place-items:center;background:conic-gradient(var(--coral),var(--gold),var(--lav),var(--coral));color:var(--ind);font-size:22px}
+.ai-btn .av::after{content:"";position:absolute;right:0;bottom:2px;width:12px;height:12px;border-radius:50%;background:#3fcf7a;box-shadow:0 0 0 2px var(--cream)}
+.ai-btn b{display:block;font-size:14.5px;font-weight:600;line-height:1.1;text-align:left}
+.ai-btn small{display:block;font-size:12px;color:var(--ink2);line-height:1.2;text-align:left}
+.ai-tip{position:fixed;left:18px;bottom:172px;z-index:94;max-width:280px;padding:15px 40px 15px 17px;border-radius:20px 20px 20px 6px;background:var(--cream);color:var(--ink);box-shadow:0 24px 50px -20px rgba(10,8,40,.6);font-size:15px;animation:tip .7s var(--spring) both}
+.ai-tip[hidden]{display:none}
+.ai-tip button{position:absolute;right:10px;top:10px;width:26px;height:26px;border-radius:50%;border:0;background:var(--sand);cursor:pointer;color:var(--ink)}
+@keyframes tip{from{opacity:0;transform:translateY(16px) scale(.94)}}
+.ai{position:fixed;left:max(14px,env(safe-area-inset-left));bottom:170px;z-index:97;width:min(380px,calc(100vw - 28px));height:min(560px,calc(100svh - 200px));border-radius:26px;background:var(--cream);color:var(--ink);box-shadow:0 40px 80px -30px rgba(10,8,40,.7);display:flex;flex-direction:column;overflow:hidden;animation:tip .5s var(--spring) both}
+.ai[hidden]{display:none}
+.ai-h{display:flex;align-items:center;gap:12px;padding:15px 18px;background:var(--ind);color:var(--cream)}
+.ai-h .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ind);font-size:20px;flex:none}
+.ai-h b{display:block;font-weight:600}.ai-h small{opacity:.8;font-size:12.5px}
+.ai-h button{margin-left:auto;width:34px;height:34px;border-radius:50%;border:0;background:rgba(251,246,238,.14);color:var(--cream);cursor:pointer;font-size:18px}
+.ai-b{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:88%;padding:12px 15px;border-radius:18px;font-size:15px;line-height:1.55}
+.msg.bot{background:var(--sand);border-bottom-left-radius:6px}
+.msg.me{align-self:flex-end;background:var(--coral);color:#fff;border-bottom-right-radius:6px}
+.msg a.btn{margin-top:10px;padding:11px 17px;font-size:14px}
+.typing{display:flex;gap:4px;padding:14px 16px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--coral);animation:ty 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes ty{50%{transform:translateY(-5px);opacity:.4}}
+.qs{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 12px}
+.qs button{padding:8px 13px;border-radius:999px;border:0;background:var(--sand);cursor:pointer;font-size:13.5px;color:var(--ink);transition:background .3s,color .3s}
+.qs button:hover{background:var(--coral);color:#fff}
+.ai-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--lineD)}
+.ai-f input{flex:1;min-width:0;border:0;background:var(--sand);border-radius:999px;padding:13px 16px;font:inherit;font-size:15px;color:var(--ink);outline:none}
+.ai-f input:focus{box-shadow:0 0 0 2px var(--coral)}
+.ai-f button{width:46px;height:46px;border-radius:50%;border:0;background:var(--coral);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none}
+.ai-f svg{width:18px;height:18px}
+@media(max-width:560px){.ai-btn{padding:5px}.ai-btn .t{display:none}.ai-tip{max-width:calc(100vw - 40px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}.sp .c{transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.9 13.9 0 0 0 5.3 4.7c2 .8 2.7.9 3.7.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M3 11 21 3l-8 18-2-8z"/></symbol>
+</svg>
+
+<div class="ld" id="ld" aria-hidden="true"><div class="in"><div class="eq"><i style="--h:40px;animation-delay:-.2s"></i><i style="--h:58px;animation-delay:-.5s"></i><i style="--h:30px;animation-delay:-.1s"></i><i style="--h:52px;animation-delay:-.7s"></i><i style="--h:44px;animation-delay:-.35s"></i><i style="--h:60px;animation-delay:-.6s"></i><i style="--h:34px;animation-delay:-.15s"></i></div><div class="n" id="ldn">0%</div><small>Afinando</small></div></div>
+<div class="prog" id="prog"></div>
+<div class="cur" id="cur" aria-hidden="true"></div>
+
+<header class="top" id="top"><div class="wrap">
+  <a class="brand" href="#inicio"><span class="mk"><span>♪</span></span><span><b>Heliomar Jacob</b><small>Musicoterapeuta</small></span></a>
+  <nav class="nav"><a href="#musicoterapia">Musicoterapia</a><a href="#sinta">Sinta a música</a><a href="#como">Como começar</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></nav>
+  <a class="btn g wa mag" href="#" data-msg="Olá, Heliomar! Encontrei seu site e gostaria de saber sobre a musicoterapia."><svg><use href="#i-wa"/></svg><span>Agendar</span></a>
+</div></header>
+
+<main id="inicio">
+<section class="hero" id="hero">
+  <canvas id="wave" aria-hidden="true"></canvas>
+  <span class="flo" style="left:8%;top:22%">♪</span><span class="flo" style="left:46%;top:14%;animation-delay:-2s;font-size:22px">♫</span><span class="flo" style="left:40%;bottom:22%;animation-delay:-4s">♩</span>
+  <div class="wrap" id="hwrap">
+    <div>
+      <span class="kick rv">Musicoterapia · Guarapari – ES</span>
+      <h1><span class="sp" id="h1a">A música como</span> <span class="sp" id="h1b"><em class="gold">caminho de cuidado</em></span></h1>
+      <p class="lead rv d2">Musicoterapia com o musicoterapeuta Heliomar Jacob, na Lagoa Funda, em Guarapari. Um espaço para se expressar, se escutar e se cuidar através da música.</p>
+      <div class="cta rv d3">
+        <a class="btn g wa mag" href="#" data-msg="Olá, Heliomar! Encontrei seu site e gostaria de agendar."><svg><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn o mag" href="#musicoterapia">O que é musicoterapia <svg><use href="#i-arr"/></svg></a>
+      </div>
+      <div class="meta rv d4"><span><b>★ 5,0</b> no Google · 11 avaliações</span><span>Lagoa Funda · Guarapari</span></div>
+    </div>
+    <div class="disc rv d2" id="disc">
+      <div class="vin"></div>
+      <div class="lab"><span>Heliomar<br>Jacob</span></div>
+      <svg class="arm" viewBox="0 0 100 120" aria-hidden="true"><circle cx="88" cy="10" r="9" fill="#fbf6ee"/><path d="M88 10 L70 80 L52 100" fill="none" stroke="#fbf6ee" stroke-width="5" stroke-linecap="round"/><rect x="40" y="94" width="20" height="14" rx="3" fill="#f4c76b" transform="rotate(35 50 101)"/></svg>
+      <div class="chip"><span class="st">★★★★★</span><b>5,0</b>no Google · 11 avaliações</div>
+    </div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true"><div class="tk" id="mq"></div></div>
+
+<section class="sec lt oq" id="musicoterapia">
+  <div class="wrap">
+    <div class="grid">
+      <div><span class="kick rv">Musicoterapia</span><h2 class="sp" style="margin-top:18px" id="h2a">O que é <em class="coral">musicoterapia?</em></h2></div>
+      <p class="lead rv">É o uso da música e dos seus elementos, como som, ritmo, melodia e harmonia, por um musicoterapeuta, para favorecer a expressão, a comunicação e o bem-estar.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv tilt"><div class="ic"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3 14v-2a9 9 0 0 1 18 0v2M3 14a2 2 0 0 1 2-2h1v7H5a2 2 0 0 1-2-2zM21 14a2 2 0 0 0-2-2h-1v7h1a2 2 0 0 0 2-2z"/></svg></div><h3>Escutar</h3><p>Ouvir músicas e sons com atenção, percebendo o que eles despertam.</p></article>
+      <article class="card rv d1 tilt"><div class="ic"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M9 18V5l11-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM20 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg></div><h3>Tocar e cantar</h3><p>Usar a voz e instrumentos, sem precisar saber música.</p></article>
+      <article class="card rv d2 tilt"><div class="ic"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div><h3>Expressar</h3><p>Criar e improvisar, dando forma ao que às vezes é difícil dizer em palavras.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec pi" id="sinta">
+  <div class="wrap">
+    <span class="kick rv">Sinta a música</span>
+    <h2 class="sp" style="margin-top:18px" id="h2b">Toque uma <em class="gold">nota</em></h2>
+    <p class="lead rv">Clique ou toque nas teclas abaixo. Às vezes, uma nota já basta para mudar o tom do dia.</p>
+    <div class="keys rv" id="keys"></div>
+    <small class="hint rv">No computador, use também as teclas A S D F G H J K.</small>
+  </div>
+</section>
+
+<section class="sec lt" id="como">
+  <div class="wrap" style="text-align:center">
+    <span class="kick rv">Primeiro contato</span>
+    <h2 class="sp" style="margin-top:18px" id="h2c">Como <em class="coral">começar</em></h2>
+    <div class="steps">
+      <div class="step rv"><b>1</b><h3>Mande uma mensagem</h3><p>Pelo WhatsApp, conte um pouco do que você procura.</p></div>
+      <div class="step rv d1"><b>2</b><h3>Combinamos o horário</h3><p>Você agenda o melhor dia para o primeiro encontro.</p></div>
+      <div class="step rv d2"><b>3</b><h3>Primeiro encontro</h3><p>Uma conversa para entender suas necessidades e pensar o acompanhamento.</p></div>
+    </div>
+    <div class="gg rv" style="text-align:left">
+      <b>5,0</b>
+      <div><span class="st">★★★★★</span><h3>11 avaliações no Google</h3><p>Veja o que dizem as pessoas atendidas pelo Heliomar.</p></div>
+      <a class="btn g mag" href="https://www.google.com/maps/search/?api=1&query=Musicoterapeuta+Heliomar+Guarapari" target="_blank" rel="noopener">Ver avaliações <svg><use href="#i-ne"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="duvidas">
+  <div class="wrap">
+    <div style="text-align:center"><span class="kick rv">Dúvidas</span><h2 class="sp" style="margin-top:18px" id="h2d">Perguntas <em class="gold">frequentes</em></h2></div>
+    <div class="faq">
+      <details class="rv"><summary>O que é musicoterapia?<i>+</i></summary><p>É o uso da música e dos seus elementos (som, ritmo, melodia e harmonia), conduzido por um musicoterapeuta, para favorecer a expressão, a comunicação e o bem-estar.</p></details>
+      <details class="rv"><summary>Preciso saber tocar ou cantar?<i>+</i></summary><p>Não. Não é preciso ter conhecimento musical. A música é usada como meio de expressão, do jeito de cada pessoa.</p></details>
+      <details class="rv"><summary>A musicoterapia é indicada para mim?<i>+</i></summary><p>Cada caso é único. Fale com o Heliomar pelo WhatsApp e conte o que você procura para saber se é indicada para você.</p></details>
+      <details class="rv"><summary>Quais são os valores e horários?<i>+</i></summary><p>Valores e horários são informados diretamente pelo WhatsApp (27) 99604-8916.</p></details>
+      <details class="rv"><summary>Onde é o atendimento?<i>+</i></summary><p>R. José Maria Piumbini, 185, Lagoa Funda, Guarapari – ES. O mapa e as rotas estão logo abaixo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec ct" id="contato">
+  <div class="wrap">
+    <span class="kick rv">Contato</span>
+    <h2 class="sp" style="margin-top:18px" id="h2k">Vamos <em class="gold">conversar?</em></h2>
+    <div class="grid">
+      <div class="rv">
+        <div class="rows">
+          <a class="wa" href="#" data-msg="Olá, Heliomar! Encontrei seu site."><span><small>Telefone / WhatsApp</small><b>(27) 99604-8916</b></span><svg><use href="#i-ne"/></svg></a>
+          <div class="r"><span><small>Endereço</small><b>R. José Maria Piumbini, 185 · Lagoa Funda · Guarapari – ES</b></span><svg><use href="#i-pin"/></svg></div>
+        </div>
+        <div class="bts">
+          <a class="btn w wa mag" href="#" data-msg="Olá, Heliomar! Encontrei seu site e gostaria de agendar."><svg><use href="#i-wa"/></svg>WhatsApp</a>
+          <a class="btn o mag" href="https://www.google.com/maps/dir/?api=1&destination=R.+Jos%C3%A9+Maria+Piumbini,+185,+Lagoa+Funda,+Guarapari+-+ES,+29214-010" target="_blank" rel="noopener"><svg><use href="#i-nav"/></svg>Google Maps</a>
+          <a class="btn o mag" href="https://waze.com/ul?q=Rua%20Jos%C3%A9%20Maria%20Piumbini%20185%20Guarapari&navigate=yes" target="_blank" rel="noopener"><svg><use href="#i-nav"/></svg>Waze</a>
+        </div>
+      </div>
+      <div class="map rv d1"><iframe title="Mapa do atendimento do musicoterapeuta Heliomar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=R.+Jos%C3%A9+Maria+Piumbini,+185,+Lagoa+Funda,+Guarapari+-+ES,+29214-010&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div class="big">Heliomar Jacob ♪</div>
+  <div class="fg">
+    <div><b style="font-family:var(--serif);font-size:30px;font-weight:400">Heliomar Jacob</b><p style="margin-top:8px;opacity:.75">Musicoterapeuta<br>Guarapari – ES</p></div>
+    <div><h5>Navegue</h5><ul><li><a href="#musicoterapia">Musicoterapia</a></li><li><a href="#sinta">Sinta a música</a></li><li><a href="#como">Como começar</a></li><li><a href="#duvidas">Dúvidas</a></li><li><a href="#contato">Contato</a></li></ul></div>
+    <div><h5>Contato</h5><ul><li><a class="wa" href="#" data-msg="Olá, Heliomar! Encontrei seu site.">(27) 99604-8916</a></li><li>R. José Maria Piumbini, 185</li><li>Lagoa Funda · Guarapari – ES</li></ul></div>
+  </div>
+  <p class="cvv">Este site não oferece atendimento de urgência. Em caso de sofrimento intenso ou risco à vida, ligue CVV 188 (24h, gratuito) ou SAMU 192.</p>
+  <div class="fb"><span>© <span id="yr"></span> Heliomar Jacob · Musicoterapia</span><span>Guarapari – ES</span></div>
+</div></footer>
+
+<a class="waf wa" href="#" data-msg="Olá, Heliomar! Encontrei seu site." aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<div class="ai-tip" id="aiTip" hidden>Olá! Quer saber como funciona a musicoterapia? Posso ajudar.<button id="tipX" aria-label="Fechar">×</button></div>
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="ai"><span class="av">♪</span><span class="t"><b>Tire suas dúvidas</b><small>Assistente virtual</small></span></button>
+<section class="ai" id="ai" hidden role="dialog" aria-label="Assistente virtual">
+  <div class="ai-h"><span class="av">♪</span><div><b>Assistente virtual</b><small>Informações sobre a musicoterapia</small></div><button id="aiX" aria-label="Fechar">×</button></div>
+  <div class="ai-b" id="aiB"></div>
+  <div class="qs" id="qs"></div>
+  <form class="ai-f" id="aiF"><input id="aiI" placeholder="Escreva sua dúvida…" autocomplete="off" aria-label="Sua mensagem"><button aria-label="Enviar"><svg><use href="#i-arr"/></svg></button></form>
+</section>
+
+<script>
+const WA='5527996048916',wa=m=>'https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function bindWa(r){r.querySelectorAll('a.wa').forEach(a=>{a.href=wa(a.dataset.msg||'Olá, Heliomar!');a.target='_blank';a.rel='noopener'})}
+bindWa(document);$('#yr').textContent=new Date().getFullYear();
+$('#mq').innerHTML=(['Ritmo','Melodia','Harmonia','Voz','Escuta','Expressão'].map(t=>'<span>'+t+'</span>').join('')).repeat(3);
+
+function split(el){const walk=node=>{[...node.childNodes].forEach(n=>{if(n.nodeType===3){const f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(w=>{if(!w)return;if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(' '));return}const ws=document.createElement('span');ws.className='w';[...w].forEach(ch=>{const c=document.createElement('span');c.className='c';c.textContent=ch;ws.appendChild(c)});f.appendChild(ws)});n.replaceWith(f)}else if(n.nodeType===1)walk(n)})};walk(el);el.querySelectorAll('.c').forEach((c,i)=>c.style.transitionDelay=(i*0.026)+'s')}
+$$('.sp').forEach(split);
+
+// loader 0-100
+(function(){const ld=$('#ld'),n=$('#ldn');let done=false;const t0=performance.now();
+ function fin(){if(done)return;done=true;n.textContent='100%';setTimeout(()=>{ld.classList.add('out');['#h1a','#h1b'].forEach((s,i)=>setTimeout(()=>$(s).classList.add('on'),250+i*200));setTimeout(()=>ld.remove(),1300)},300)}
+ function st(t){const p=Math.min(1,(t-t0)/(reduce?300:2000));n.textContent=Math.round(100*(1-Math.pow(1-p,3)))+'%';if(p<1)requestAnimationFrame(st);else fin()}
+ requestAnimationFrame(st);setTimeout(fin,4500)})();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.sp:not(#h1a):not(#h1b)').forEach(el=>io.observe(el));
+
+// topo, progresso, parallax
+(function(){const t=$('#top'),pr=$('#prog'),hw=$('#hwrap');let ly=0;
+ function on(){const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;pr.style.setProperty('--p',max>0?y/max:0);t.classList.toggle('sc',y>30);t.classList.toggle('hide',y>ly&&y>500);ly=y;
+  if(!reduce&&y<innerHeight){hw.style.transform='translateY('+(y*.16)+'px)';hw.style.opacity=1-y/innerHeight*.9}}
+ addEventListener('scroll',on,{passive:true});on()})();
+
+// onda sonora no hero (reage ao mouse)
+(function(){const c=$('#wave'),x=c.getContext('2d');let w,h,amp=1,ta=1,mx=.5;const dpr=Math.min(2,devicePixelRatio||1);
+ function rs(){w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0)}rs();addEventListener('resize',rs);
+ const L=[{c:'rgba(244,199,107,.75)',a:.22,f:1.6,s:.9,o:0},{c:'rgba(238,138,106,.6)',a:.3,f:1.1,s:.6,o:2},{c:'rgba(185,179,234,.5)',a:.18,f:2.3,s:1.2,o:4}];
+ $('#hero').addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();mx=(e.clientX-r.left)/r.width;ta=1.9},{passive:true});
+ $('#hero').addEventListener('pointerleave',()=>ta=1);
+ let t=0;(function d(){t+=reduce?0:.016;amp+=(ta-amp)*.05;ta+=(1-ta)*.01;x.clearRect(0,0,w,h);
+  L.forEach(l=>{x.beginPath();for(let i=0;i<=w;i+=6){const p=i/w,env=Math.exp(-Math.pow((p-mx)*2.2,2))*.8+.35;const y=h*.55+Math.sin(p*Math.PI*2*l.f+t*l.s*3+l.o)*h*l.a*env*amp*Math.sin(t*.7+l.o)*.9+Math.sin(p*30+t*4)*3;i?x.lineTo(i,y):x.moveTo(i,y)}x.strokeStyle=l.c;x.lineWidth=2.2;x.stroke()});
+  requestAnimationFrame(d)})()})();
+
+// piano com Web Audio
+(function(){const K=$('#keys');const notes=[['Dó',261.63,'a'],['Ré',293.66,'s'],['Mi',329.63,'d'],['Fá',349.23,'f'],['Sol',392,'g'],['Lá',440,'h'],['Si',493.88,'j'],['Dó',523.25,'k']];
+ const blacks=[[0,277.18],[1,311.13],[3,369.99],[4,415.3],[5,466.16]];let ac=null;
+ function play(f){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();const o=ac.createOscillator(),o2=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;o.type='sine';o2.type='triangle';o.frequency.value=f;o2.frequency.value=f*2;const g2=ac.createGain();g2.gain.value=.12;o2.connect(g2);g2.connect(g);o.connect(g);g.connect(ac.destination);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.22,t+.02);g.gain.exponentialRampToValueAtTime(.001,t+1.8);o.start(t);o2.start(t);o.stop(t+1.9);o2.stop(t+1.9)}catch(e){}}
+ function hit(el,f,ev){play(f);el.classList.add('dn');setTimeout(()=>el.classList.remove('dn'),200);const r=K.getBoundingClientRect(),b=el.getBoundingClientRect();const rp=document.createElement('span');rp.className='ripple';rp.style.left=(b.left-r.left+b.width/2)+'px';rp.style.top=(b.top-r.top+b.height*.4)+'px';K.appendChild(rp);setTimeout(()=>rp.remove(),1200);burst(b.left+b.width/2,b.top)}
+ notes.forEach(([n,f,k])=>{const b=document.createElement('button');b.type='button';b.className='key';b.innerHTML='<span>'+n+'</span>';b.setAttribute('aria-label','Nota '+n);b.dataset.k=k;b.addEventListener('pointerdown',e=>{e.preventDefault();hit(b,f,e)});K.appendChild(b)});
+ blacks.forEach(([i,f])=>{const b=document.createElement('button');b.type='button';b.className='blk';b.setAttribute('aria-label','Sustenido');b.style.left='calc('+((i+1)/8*100)+'% - 3.5%)';b.addEventListener('pointerdown',e=>{e.preventDefault();hit(b,f,e)});K.appendChild(b)});
+ addEventListener('keydown',e=>{if(e.repeat||/input|textarea/i.test(document.activeElement.tagName))return;const i=notes.findIndex(n=>n[2]===e.key.toLowerCase());if(i<0)return;const r=$('#sinta').getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;hit(K.querySelectorAll('.key')[i],notes[i][1])})})();
+
+// notas musicais saindo do cursor
+function burst(x,y,n){if(reduce)return;const s=['♪','♫','♩','♬'];for(let i=0;i<(n||3);i++){const e=document.createElement('span');e.className='note';e.textContent=s[Math.random()*4|0];e.style.left=x+'px';e.style.top=y+'px';e.style.setProperty('--dx',(Math.random()*80-40)+'px');e.style.setProperty('--r',(Math.random()*60-30)+'deg');e.style.color=['#f4c76b','#ee8a6a','#b9b3ea'][i%3];document.body.appendChild(e);setTimeout(()=>e.remove(),1400)}}
+document.addEventListener('click',e=>{if(!e.target.closest('#keys'))burst(e.clientX,e.clientY,2)});
+
+if(fine&&!reduce){
+  document.addEventListener('pointermove',e=>{const b=e.target.closest&&e.target.closest('.mag');if(!b)return;const r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)'},{passive:true});
+  document.addEventListener('pointerout',e=>{const b=e.target.closest&&e.target.closest('.mag');if(b&&!b.contains(e.relatedTarget))b.style.transform=''});
+  $$('.tilt').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateX('+(-y*10)+'deg) rotateY('+(x*10)+'deg) translateY(-6px)'});c.addEventListener('pointerleave',()=>c.style.transform='')});
+  const d=$('#disc');$('#hero').addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;d.style.setProperty('--px',(-x*20)+'px');d.style.setProperty('--py',(-y*20)+'px')});
+  const cur=$('#cur');let cx=-100,cy=-100,tx=-100,ty=-100,last=0;
+  addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;cur.classList.add('on');cur.classList.toggle('big',!!(e.target.closest&&e.target.closest('a,button,summary,.card')));const n=performance.now();if(n-last>140&&e.target.closest&&e.target.closest('#hero')){last=n;burst(tx,ty,1)}},{passive:true});
+  document.addEventListener('pointerleave',()=>cur.classList.remove('on'));
+  (function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cur.style.transform='translate('+cx+'px,'+cy+'px)';requestAnimationFrame(loop)})();
+}
+
+// assistente virtual
+(function(){
+const btn=$('#aiBtn'),box=$('#ai'),body=$('#aiB'),qs=$('#qs'),f=$('#aiF'),inp=$('#aiI'),tip=$('#aiTip');
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+const lev=(a,b)=>{const m=[];for(let i=0;i<=b.length;i++)m[i]=[i];for(let j=0;j<=a.length;j++)m[0][j]=j;for(let i=1;i<=b.length;i++)for(let j=1;j<=a.length;j++)m[i][j]=Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[j-1]===b[i-1]?0:1));return m[b.length][a.length]};
+const W=(t,m)=>'<br><a class="btn w" target="_blank" rel="noopener" href="'+wa(m)+'">'+t+'</a>';
+const KB=[
+ {k:['musicoterapia','musicoterapeuta','oque','funciona','sessao','sessoes','terapia'],a:'A <b>musicoterapia</b> usa a música e seus elementos (som, ritmo, melodia e harmonia), conduzida por um musicoterapeuta, para favorecer a expressão, a comunicação e o bem-estar.'},
+ {k:['tocar','cantar','instrumento','saber','musica','conhecimento','afinado'],a:'Não é preciso saber tocar ou cantar. A música é usada como meio de expressão, do jeito de cada pessoa.'},
+ {k:['indicada','indicado','crianca','filho','filha','adulto','idoso','autismo','tea','ansiedade','quem'],a:'Cada caso é único. Conte ao Heliomar o que você procura para saber se a musicoterapia é indicada para você.'+W('Perguntar ao Heliomar','Olá, Heliomar! Gostaria de saber se a musicoterapia é indicada para o meu caso.')},
+ {k:['preco','valor','valores','quanto','custa','pagamento','plano','convenio'],a:'Valores e formas de pagamento são informados diretamente pelo WhatsApp.'+W('Perguntar valores','Olá, Heliomar! Gostaria de saber os valores.')},
+ {k:['horario','horarios','agendar','marcar','consulta','vaga','disponibilidade'],a:'Os horários são combinados pelo WhatsApp <b>(27) 99604-8916</b>.'+W('Combinar horário','Olá, Heliomar! Gostaria de verificar horários disponíveis.')},
+ {k:['onde','endereco','fica','local','localizacao','rua','chegar','mapa','rota','guarapari','lagoa'],a:'R. José Maria Piumbini, 185 · Lagoa Funda · Guarapari – ES. O mapa e as rotas estão no fim da página.'},
+ {k:['avaliacao','avaliacoes','google','nota','estrelas'],a:'O Heliomar tem nota <b>5,0</b> no Google, com <b>11 avaliações</b>.'},
+ {k:['contato','telefone','whatsapp','numero'],a:'WhatsApp: <b>(27) 99604-8916</b>'+W('Abrir WhatsApp','Olá, Heliomar! Encontrei seu site.')},
+ {k:['urgencia','emergencia'],a:'Este site não oferece atendimento de urgência. Em situação de risco à vida, ligue <b>CVV 188</b> (24h) ou <b>SAMU 192</b>.'},
+];
+const GREET=['oi','ola','bom dia','boa tarde','boa noite','opa','oie'],THANKS=['obrigado','obrigada','valeu','grata','grato'];
+const RISK=/(suicid|me matar|tirar minha vida|quero morrer|nao aguento mais|acabar com tudo|me machucar)/;
+function answer(q){const n=norm(q);if(!n)return null;
+  if(RISK.test(n))return 'Sinto muito que você esteja passando por isso. Você não está sozinho(a). Ligue agora para o <b>CVV 188</b> (24h, gratuito) ou, em emergência, <b>SAMU 192</b>. Se puder, procure alguém de confiança perto de você.';
+  if(n.split(' ').length<=3&&GREET.some(g=>n===g||n.startsWith(g+' ')||n.endsWith(' '+g)))return 'Olá! Posso explicar o que é <b>musicoterapia</b>, como <b>agendar</b>, os <b>valores</b> ou onde fica o atendimento.';
+  if(THANKS.some(t=>n.includes(t)))return 'Imagina! Fico à disposição. ♪';
+  const ws=n.split(' ');let best=null,bs=0;
+  KB.forEach(e=>{let s=0;e.k.forEach(k=>ws.forEach(w=>{if(w===k)s+=2;else if(w.length>=4&&k.length>=4&&lev(w,k)<=(k.length>6?2:1))s+=1}));if(s>bs){bs=s;best=e}});
+  return bs>=2?best.a:null}
+function add(h,me){const d=document.createElement('div');d.className='msg '+(me?'me':'bot');d.innerHTML=h;body.appendChild(d);body.scrollTop=body.scrollHeight}
+function bot(h){const t=document.createElement('div');t.className='msg bot typing';t.innerHTML='<i></i><i></i><i></i>';body.appendChild(t);body.scrollTop=body.scrollHeight;setTimeout(()=>{t.remove();add(h)},reduce?50:700)}
+function ask(q){add(q.replace(/</g,'&lt;'),true);bot(answer(q)||'Não tenho essa informação aqui. Respondo sobre <b>musicoterapia, agendamento, valores e endereço</b>. Para outras dúvidas, fale pelo WhatsApp:'+W('Perguntar no WhatsApp','Olá, Heliomar! Tenho uma dúvida: '+q))}
+qs.innerHTML=['O que é musicoterapia?','Preciso saber cantar?','Como agendar?','Valores','Onde fica?'].map(q=>'<button type="button">'+q+'</button>').join('');qs.querySelectorAll('button').forEach(b=>b.onclick=()=>ask(b.textContent));
+let started=false;
+function open(){box.hidden=false;tip.hidden=true;btn.setAttribute('aria-expanded','true');if(!started){started=true;bot('Olá! Sou a assistente virtual do site do <b>musicoterapeuta Heliomar</b>. Como posso ajudar?')}setTimeout(()=>inp.focus(),300)}
+function close(){box.hidden=true;btn.setAttribute('aria-expanded','false')}
+btn.onclick=()=>box.hidden?open():close();$('#aiX').onclick=close;
+f.onsubmit=e=>{e.preventDefault();const v=inp.value.trim();if(!v)return;inp.value='';ask(v)};
+$('#tipX').onclick=()=>tip.hidden=true;setTimeout(()=>{if(box.hidden)tip.hidden=false},8000);
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden)close()});
+})();
+</script>
+</body>
+</html>
